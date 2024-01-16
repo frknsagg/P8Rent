@@ -24,28 +24,30 @@ const HomePage: React.FC = () => {
     handleFilter();
   }, [startYear, endYear]);
 
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
-    <h1>Filtered Cars</h1>
-    <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-      <div>
-        <label>Start Year:</label>
-        <input type="number" value={startYear} onChange={(e) => setStartYear(Number(e.target.value))} />
-      </div>
-      <div>
-        <label>End Year:</label>
-        <input type="number" value={endYear} onChange={(e) => setEndYear(Number(e.target.value))} />
-      </div>
-      <button onClick={handleFilter}>Filter</button>
+  return (<div className="container">
+    <div >
+  <h1>Filtered Cars</h1>
+  <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+    <div>
+      <label>Start Year:</label>
+      <input type="number" value={startYear} onChange={(e) => setStartYear(Number(e.target.value))} />
     </div>
-    <div className="row">
-      {filteredCars.map((car) => (
-        <div key={car.id} className="col-md-3 mb-4">
-          <CarCard car={car} />
-        </div>
-      ))}
+    <div>
+      <label>End Year:</label>
+      <input type="number" value={endYear} onChange={(e) => setEndYear(Number(e.target.value))} />
     </div>
+    <button onClick={handleFilter}>Filter</button>
   </div>
+  
+  <div className="row" >
+    {filteredCars.map((car) => (
+      <div key={car.id} className="col-md-3 mb-4">
+        <CarCard car={car} />
+      </div>
+    ))}
+  </div>
+  </div>
+</div>
 );
 };
 

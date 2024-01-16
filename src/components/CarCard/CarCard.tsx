@@ -10,9 +10,9 @@ interface CarCardProps {
 
 const CarCard: React.FC<CarCardProps> = ({ car }) => {
   return (
-    <div className="card h-100">
-      <div className="card-body">
-        <h2 className="card-title">{car.modelResponse.name}</h2>
+    <div className="card card--car card--car--new offers__card">
+      <div className="card-body d-flex flex-column h-100">
+        <h4 className="text-style text-style--h3 text-style--h3-xl card__title">{car.modelResponse.name}</h4>
         <p className="card-text">Year: {car.year}</p>
         <p className="card-text">Kilometer: {car.kilometer}</p>
         <p className="card-text">Daily Price: {car.daily_price}</p>
@@ -24,5 +24,7 @@ const CarCard: React.FC<CarCardProps> = ({ car }) => {
     </div>
   );
 };
+ 
+
 
 export default CarCard;
