@@ -9,9 +9,9 @@ const Navbar: React.FC<Props> = () => {
     <>
        <nav className="navbar navbar-expand-lg navbar-dark p-3 fixed-top" id="mainNav">
           <div className="container-fluid">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to="/">
              P8Rent
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -42,17 +42,12 @@ const Navbar: React.FC<Props> = () => {
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <Link
-                    className="nav-link mx-2 dropdown-toggle"
-                    to="/"
-                    id="navbarDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Login/Sing in
-                  </Link>
-                  <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                 
+                   
+                  
+                    Login/Sign in
+                 
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> Login/Sign in
                     <li>
                       <Link className="dropdown-item" to="/Login">
                       Login

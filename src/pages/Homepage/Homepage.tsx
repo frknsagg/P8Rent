@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CarCard } from '../../components';
 import { CarModel } from '../../models/responses/CarModel';
 import CarService from '../../services/CarService';
+import './Homepage.css';
 
 
 

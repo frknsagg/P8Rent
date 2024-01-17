@@ -2,7 +2,8 @@ import { ReactElement } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from './pages/Homepage/Homepage';
 import Navbar from './components/Navbar/Navbar';
-import Productpage from './pages/ProductPage/Productpage';
+import CarsPage from './pages/Carspage/CarsPage';
+import About from './pages/About/AboutPage';
 
 
 
@@ -12,8 +13,8 @@ function App(): ReactElement {
       <Navbar />
       <Routes>
         <Route path='/' element={<Homepage />}></Route>
-        <Route path='/products' element={<Productpage />}></Route>
-			
+        <Route path='/cars' element={<CarsPage />}></Route>
+        <Route path='/About' element={<About />}></Route>
         </Routes>
     </BrowserRouter>
 	);
